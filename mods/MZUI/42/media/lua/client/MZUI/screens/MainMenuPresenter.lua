@@ -90,7 +90,7 @@ local function cardPrerender(item)
     item:updateTooltip()
 end
 
-local function bindItemPrerender(item)
+function Presenter.bindItemPrerender(item)
     item.prerender = cardPrerender
     -- Kill the vanilla hover-fade (prerenderBottomPanelLabel's grey rect);
     -- keep the object alive so updateBottomPanelButtons (which reads child.fade)
@@ -131,7 +131,7 @@ function Presenter.layout(screen)
         item:setY(spot.y)
         item:setWidth(column.cardWidth)
         item:setHeight(column.rowHeight)
-        bindItemPrerender(item)
+        Presenter.bindItemPrerender(item)
     end
 
     -- Move the panel to the column origin: children are panel-local, and

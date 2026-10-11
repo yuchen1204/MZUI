@@ -2,22 +2,10 @@
 -- a translucent wash (game visible behind). Shares the MainScreen.prerender
 -- wrapper that Bootstrap installs; layout() is gated on screen.inGame there.
 MZUI = MZUI or {}
-local Theme = require "MZUI/Theme"
+local MainMenuPresenter = require "MZUI/screens/MainMenuPresenter"
 local Draw = require "MZUI/Draw"
 local Geometry = require "MZUI/Geometry"
 local Snapshot = require "MZUI/Snapshot"
-
-local function bindItemPrerender(item)
-    item.prerender = function(o)
-        local hot = o:isMouseOver() or o.joypadFocused
-        Draw.card(o, 0, 0, o:getWidth(), o:getHeight(), hot and "hover" or "idle",
-            o.joypadFocused)
-        ISLabel.prerender(o)
-    end
-    if item.fade ~= nil and item.fade.setFadeIn ~= nil then
-        item.fade.setFadeIn(item.fade, false)
-    end
-end
 
 local Presenter = MZUI.PausePresenter or {}
 MZUI.PausePresenter = Presenter
@@ -63,7 +51,7 @@ local function layout(screen)
         item:setY(spot.y)
         item:setWidth(column.cardWidth)
         item:setHeight(column.rowHeight)
-        bindItemPrerender(item)
+        MainMenuPresenter.bindItemPrerender(item)
     end
     panel:setX(column.x)
     panel:setY(column.y)

@@ -68,7 +68,8 @@ end
 -- Idempotent and self-healing: healthy presentation = a live scope with our
 -- prerender wrapper in place. Anything else (first boot, a reloadLuaFile
 -- teardown, a half-failed install) retries here; callers register this on
--- OnGameBoot + OnMainMenuEnter.
+-- OnGameBoot + OnMainMenuEnter + OnGameStart. A save can reset Lua before
+-- entering the world, without another boot or main-menu event.
 function Boot.install()
     if MainScreen == nil or MainScreen.prerender == nil then return end
     local scope = Boot.scope
@@ -95,4 +96,7 @@ if Events and type(Events.OnGameBoot) == "table" then
 end
 if Events and type(Events.OnMainMenuEnter) == "table" then
     Events.OnMainMenuEnter.Add(Boot.install)
+end
+if Events and type(Events.OnGameStart) == "table" then
+    Events.OnGameStart.Add(Boot.install)
 end
