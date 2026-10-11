@@ -1,0 +1,13 @@
+{
+  "IGUI_MZUI_ContinueHint": "Continue from the last save",
+  "IGUI_MZUI_LoadHint": "Pick an existing save",
+  "IGUI_MZUI_SoloHint": "Start a new character",
+  "IGUI_MZUI_MultiplayerHint": "Join or host a server",
+  "IGUI_MZUI_CoopHint": "Local co-op",
+  "IGUI_MZUI_OptionsHint": "Game, display and keybinding settings",
+  "IGUI_MZUI_ModsHint": "Enable or disable mods",
+  "IGUI_MZUI_WorkshopHint": "Upload to the Workshop",
+  "IGUI_MZUI_CreditsHint": "Credits",
+  "IGUI_MZUI_ExitHint": "Quit to desktop",
+  "IGUI_MZUI_ReturnHint": "Back to the game"
+}

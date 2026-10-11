@@ -1,0 +1,6 @@
+name=MZ UI - Modern Menu & Settings
+id=MZUI
+author=yc & Claude
+description=Cool grey-blue UI for the B42 title screen, pause menu, settings and multiplayer server browser. Preserves native actions and navigation. Preview release; disable and restart to restore vanilla UI. No mod dependencies.
+modversion=0.1.0
+versionMin=42.20

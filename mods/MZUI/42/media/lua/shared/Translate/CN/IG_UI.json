@@ -1,0 +1,13 @@
+{
+  "IGUI_MZUI_ContinueHint": "从上次存档继续",
+  "IGUI_MZUI_LoadHint": "选择一个已有存档",
+  "IGUI_MZUI_SoloHint": "创建新角色",
+  "IGUI_MZUI_MultiplayerHint": "加入或建立服务器",
+  "IGUI_MZUI_CoopHint": "本地联机",
+  "IGUI_MZUI_OptionsHint": "游戏、显示与按键设置",
+  "IGUI_MZUI_ModsHint": "启用或禁用模组",
+  "IGUI_MZUI_WorkshopHint": "上传到创意工坊",
+  "IGUI_MZUI_CreditsHint": "制作人员",
+  "IGUI_MZUI_ExitHint": "返回桌面",
+  "IGUI_MZUI_ReturnHint": "继续游戏"
+}
